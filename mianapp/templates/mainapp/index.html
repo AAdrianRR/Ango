@@ -1,0 +1,14 @@
+{% extends "layouts/layouts.html" %}
+
+{% block title %}Inicio{% endblock title %}
+
+{% block content %}
+<h1>Bienvenido a Django Proyecto UTD</h1>
+<p>Este es el contenido de la página principal.</p>
+{% endblock content %}
+
+{% if user.is_authenticated %}
+    <div class="alert-success">
+        ¡Bienvenido, <strong>{{ user.username }}</strong>! Nos alegra tenerte de vuelta.
+    </div>
+{% endif %}
